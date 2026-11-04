@@ -1,0 +1,116 @@
+/* Sân khấu Bug Nghe Lời: chuyển động của mèo theo từng lệnh */
+@keyframes cat-breathe {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.025) translateY(-4px); }
+}
+.cat-idle { animation: cat-breathe 3.4s ease-in-out infinite; transform-origin: 50% 100%; }
+@keyframes cat-jump {
+  0% { transform: translateY(0) scale(1, 1); }
+  18% { transform: translateY(6px) scale(1.06, 0.92); }
+  45% { transform: translateY(-290px) scale(0.97, 1.04); }
+  70% { transform: translateY(-30px) scale(1, 1); }
+  84% { transform: translateY(4px) scale(1.05, 0.93); }
+  100% { transform: translateY(0) scale(1, 1); }
+}
+.cat-nhay { animation: cat-jump 1.15s ease-in-out 3; transform-origin: 50% 100%; }
+@keyframes cat-run {
+  0% { transform: translateX(-300px) translateY(0); }
+  12% { transform: translateX(-215px) translateY(-16px); }
+  25% { transform: translateX(-110px) translateY(0); }
+  37% { transform: translateX(-10px) translateY(-16px); }
+  50% { transform: translateX(95px) translateY(0) scaleX(1); }
+  50.1% { transform: translateX(95px) translateY(0) scaleX(-1); }
+  62% { transform: translateX(0) translateY(-16px) scaleX(-1); }
+  75% { transform: translateX(-110px) translateY(0) scaleX(-1); }
+  87% { transform: translateX(-215px) translateY(-16px) scaleX(-1); }
+  99.9% { transform: translateX(-300px) translateY(0) scaleX(-1); }
+  100% { transform: translateX(-300px) translateY(0) scaleX(1); }
+}
+.cat-chay { animation: cat-run 2.1s linear 2; }
+@keyframes cat-sleep {
+  0%, 100% { transform: rotate(-3deg) translateY(14px) scale(1.01, 0.97); }
+  50% { transform: rotate(-3deg) translateY(18px) scale(1.035, 0.955); }
+}
+.cat-ngu { animation: cat-sleep 3.6s ease-in-out infinite; transform-origin: 50% 100%; }
+@keyframes cat-eat {
+  0%, 100% { transform: translateX(150px) rotate(0deg); }
+  30% { transform: translateX(150px) rotate(5deg) translateY(10px); }
+  55% { transform: translateX(150px) rotate(-1deg); }
+  80% { transform: translateX(150px) rotate(5deg) translateY(10px); }
+}
+.cat-an { animation: cat-eat 1.15s ease-in-out 4; transform-origin: 50% 90%; }
+@keyframes cat-talk {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-2.4deg) translateY(-5px); }
+  75% { transform: rotate(2.4deg) translateY(-5px); }
+}
+.cat-keu { animation: cat-talk 0.55s ease-in-out 6; transform-origin: 50% 100%; }
+@keyframes cat-roll {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-16deg) translateX(-36px); }
+  55% { transform: rotate(13deg) translateX(30px); }
+  80% { transform: rotate(-8deg) translateX(-16px); }
+}
+.cat-lan { animation: cat-roll 1.25s ease-in-out 3; transform-origin: 50% 100%; }
+@keyframes cat-chase {
+  0% { transform: translateX(0) translateY(0); }
+  20% { transform: translateX(190px) translateY(-14px); }
+  40% { transform: translateX(60px) translateY(0); }
+  58% { transform: translateX(-190px) translateY(-14px); }
+  76% { transform: translateX(-40px) translateY(0) scale(1, 1); }
+  86% { transform: translateX(-40px) translateY(-120px) scale(1.03, 0.97); }
+  100% { transform: translateX(0) translateY(0); }
+}
+.cat-duoi { animation: cat-chase 2.6s ease-in-out 2; }
+@keyframes cat-angry {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  20% { transform: translateX(-9px) rotate(-1.6deg); }
+  40% { transform: translateX(9px) rotate(1.6deg); }
+  60% { transform: translateX(-9px) rotate(-1.6deg); }
+  80% { transform: translateX(9px) rotate(1.6deg); }
+}
+.cat-gian { animation: cat-angry 0.34s linear 10; }
+@keyframes cat-love {
+  0%, 100% { transform: translateY(0) scale(1); }
+  30% { transform: translateY(-26px) scale(1.03); }
+  60% { transform: translateY(0) scale(1); }
+}
+.cat-thuong { animation: cat-love 0.9s ease-in-out 4; transform-origin: 50% 100%; }
+@keyframes cat-float {
+  0% { opacity: 0; transform: translateY(16px) scale(0.7); }
+  25% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-190px) scale(1.25); }
+}
+.cat-float { animation: cat-float 2.6s ease-out infinite; }
+@keyframes cat-zzz {
+  0% { opacity: 0; transform: translate(0, 0) scale(0.7) rotate(-8deg); }
+  30% { opacity: 1; }
+  100% { opacity: 0; transform: translate(70px, -210px) scale(1.5) rotate(10deg); }
+}
+.cat-zzz { animation: cat-zzz 3s ease-out infinite; }
+@keyframes cat-fly {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(230px, -120px); }
+  50% { transform: translate(90px, -30px); }
+  75% { transform: translate(-220px, -130px); }
+  100% { transform: translate(0, 0); }
+}
+.cat-fly { animation: cat-fly 2.6s ease-in-out 2; }
+@keyframes cat-rain {
+  0% { transform: translateY(-60px); opacity: 0; }
+  12% { opacity: 1; }
+  100% { transform: translateY(1150px); opacity: 0.9; }
+}
+.cat-rain { animation: cat-rain 2.8s linear infinite; }
+@keyframes cat-toast {
+  0% { opacity: 0; transform: translateY(-16px); }
+  8% { opacity: 1; transform: translateY(0); }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.cat-toast { animation: cat-toast 6s ease forwards; }
+@keyframes cat-pop {
+  0% { opacity: 0; transform: scale(0.6) translateY(14px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+.cat-pop { animation: cat-pop 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.4) both; }
