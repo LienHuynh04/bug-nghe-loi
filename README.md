@@ -10,9 +10,9 @@ Game tương tác cho TikTok LIVE dùng **ảnh mèo thật của kênh (Bug)**:
 4. Đủ **100 tim** thì mưa tim quanh Bug. Quà chỉ được cảm ơn bằng lời, không đổi lấy bất kỳ lợi thế nào.
 5. 30 giây không ai ra lệnh, Bug tự làm một động tác ngẫu nhiên cho vui (không tính điểm).
 
-## Ảnh mèo
+## Hình mèo
 
-Ảnh Bug nằm ở `public/assets/cat.png` — đã tách nền trong suốt từ ảnh gốc bạn gửi (mèo xám, vòng hoa xanh). **File PNG là file nhị phân nên không đi qua được công cụ push của Muse: khi tạo repo, bạn tải file này lên GitHub bằng giao diện web** (vào thư mục public/assets trên repo rồi Add file → Upload files), hoặc đơn giản là copy cả thư mục game về Mac chạy luôn không cần qua GitHub. Nếu thiếu ảnh, sân khấu tạm hiện emoji 🐱 thay thế.
+Bug trên sân khấu là **bản vẽ anime bằng SVG** (file `src/game/animeCat.ts`, không phải file ảnh): lông xám, mắt vàng, ngực và chân trắng, vòng cổ hoa xanh đúng đặc điểm Bug thật. Mèo tự đổi **9 biểu cảm** theo hành động: bình thường · vui · lấp lánh (nhảy) · ngủ · hài lòng (ăn) · há miệng kêu · tập trung rình bướm · giận cau mày · mắt trái tim (thương). Vì là file chữ nên đẩy lên GitHub trọn vẹn, không cần tải thêm ảnh nào.
 
 ## Chạy trên Mac
 

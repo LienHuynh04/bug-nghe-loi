@@ -64,7 +64,7 @@ export function CatControls({ view, stageCount = 0 }: { view: StageView | null; 
         <Btn onClick={() => emitTest('follow', fake(4))}>➕ Follow</Btn>
       </div>
       <p className="text-xs text-slate-500">
-        Lưu ý: ảnh Bug là file <b>public/assets/cat.png</b> (đã tách nền từ ảnh bạn gửi). Nếu sân khấu hiện emoji 🐱 thay vì ảnh Bug thì là file ảnh chưa có trên máy — kiểm tra lại thư mục public/assets. Muốn nghe giọng dẫn, mở thêm trang stage (link ở thẻ Kết nối).
+        Bug trên sân khấu là bản vẽ anime bằng SVG (src/game/animeCat.ts), tự đổi biểu cảm theo từng lệnh: nhảy thì mắt lấp lánh, giận thì cau mày đúng chất Bug, thương thì mắt trái tim. Muốn nghe giọng dẫn, mở thêm trang stage (link ở thẻ Kết nối).
       </p>
     </div>
   );

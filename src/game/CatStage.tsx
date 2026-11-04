@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import type { CatState } from './useCat';
 import { ACTIONS } from './cat';
+import { animeCatSvg, EXPR_BY_ACTION } from './animeCat';
 import './cat.css';
 
 const HEART_POS = [90, 210, 340, 470, 590, 720, 850, 950];
@@ -8,11 +8,10 @@ const FLOATERS = ['❤️', '💗', '💕', '❤️', '💖'];
 
 /**
  * Sân khấu Bug Nghe Lời: căn phòng vẽ bằng CSS/SVG, giữa phòng là BUG THẬT
- * (ảnh public/assets/cat.png đã tách nền). Người xem gõ lệnh, Bug làm động tác tương ứng.
+ * (bản vẽ SVG trong src/game/animeCat.ts). Người xem gõ lệnh, Bug làm động tác tương ứng.
  */
 export function CatStage({ game }: { game: CatState }) {
   const v = game.view;
-  const [imgOk, setImgOk] = useState(true);
   const action = v?.action ?? 'idle';
   const likePct = v ? Math.min(100, ((v.likeTotal % v.likeGoal) / v.likeGoal) * 100) : 0;
 
@@ -159,14 +158,10 @@ export function CatStage({ game }: { game: CatState }) {
             )}
           </div>
 
-          {/* BUG THẬT */}
-          <div className="absolute left-1/2 top-[1050px] z-10 w-[640px] -translate-x-1/2">
+          {/* BUG ANIME: vẽ bằng SVG, đổi biểu cảm theo hành động */}
+          <div className="absolute left-1/2 top-[1030px] z-10 w-[660px] -translate-x-1/2">
             <div className={action === 'idle' ? 'cat-idle' : `cat-${action}`}>
-              {imgOk ? (
-                <img src="/assets/cat.png" alt="Mèo Bug" className="w-full drop-shadow-[0_18px_22px_rgba(90,40,0,0.35)]" onError={() => setImgOk(false)} />
-              ) : (
-                <div className="py-[120px] text-center text-[300px] leading-none">🐱</div>
-              )}
+              <div className="w-full drop-shadow-[0_18px_22px_rgba(90,40,0,0.35)] [&>svg]:h-auto [&>svg]:w-full" dangerouslySetInnerHTML={{ __html: animeCatSvg(EXPR_BY_ACTION[action] ?? 'normal') }} />
             </div>
           </div>
 
