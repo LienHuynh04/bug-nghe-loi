@@ -1,6 +1,6 @@
 import type { CatState } from './useCat';
 import { ACTIONS } from './cat';
-import { animeCatSvg, EXPR_BY_ACTION } from './animeCat';
+import { CAT_SHEET, CELL_BY_ACTION, cellPos } from './catArt';
 import './cat.css';
 
 const HEART_POS = [90, 210, 340, 470, 590, 720, 850, 950];
@@ -158,10 +158,15 @@ export function CatStage({ game }: { game: CatState }) {
             )}
           </div>
 
-          {/* BUG ANIME: vẽ bằng SVG, đổi biểu cảm theo hành động */}
+          {/* BUG ANIME: ảnh vẽ theo Bug thật, đổi biểu cảm theo hành động */}
           <div className="absolute left-1/2 top-[1030px] z-10 w-[660px] -translate-x-1/2">
             <div className={action === 'idle' ? 'cat-idle' : `cat-${action}`}>
-              <div className="w-full drop-shadow-[0_18px_22px_rgba(90,40,0,0.35)] [&>svg]:h-auto [&>svg]:w-full" dangerouslySetInnerHTML={{ __html: animeCatSvg(EXPR_BY_ACTION[action] ?? 'normal') }} />
+              <div
+                className="aspect-square w-full drop-shadow-[0_18px_22px_rgba(90,40,0,0.35)]"
+                role="img"
+                aria-label="Mèo Bug anime"
+                style={{ backgroundImage: `url(${CAT_SHEET})`, backgroundSize: '300% 300%', backgroundPosition: cellPos(CELL_BY_ACTION[action] ?? 0) }}
+              />
             </div>
           </div>
 

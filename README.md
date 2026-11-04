@@ -12,7 +12,7 @@ Game tương tác cho TikTok LIVE dùng **ảnh mèo thật của kênh (Bug)**:
 
 ## Hình mèo
 
-Bug trên sân khấu là **bản vẽ anime bằng SVG** (file `src/game/animeCat.ts`, không phải file ảnh): lông xám, mắt vàng, ngực và chân trắng, vòng cổ hoa xanh đúng đặc điểm Bug thật. Mèo tự đổi **9 biểu cảm** theo hành động: bình thường · vui · lấp lánh (nhảy) · ngủ · hài lòng (ăn) · há miệng kêu · tập trung rình bướm · giận cau mày · mắt trái tim (thương). Vì là file chữ nên đẩy lên GitHub trọn vẹn, không cần tải thêm ảnh nào.
+Bug trên sân khấu là **bản vẽ anime theo đúng ảnh Bug thật** (lông xám, mắt vàng, ngực và chân trắng, vòng cổ hoa xanh), gồm **9 biểu cảm** đổi theo hành động: thường · vui · lấp lánh (nhảy) · ngủ · hài lòng (ăn) · há miệng kêu · tập trung rình bướm · giận cau mày · mắt trái tim (thương). Ảnh được tách nền, nén WebP và nhúng dạng base64 vào file `src/game/catArt.ts` nên vẫn là file chữ — đẩy lên GitHub trọn vẹn, không cần tải thêm ảnh nào.
 
 ## Chạy trên Mac
 
